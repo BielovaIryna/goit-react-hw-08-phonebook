@@ -1,5 +1,9 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { selectContacts, selectError, selectIsLoading } from 'redux/contacts/selectors';
+import {
+  selectContacts,
+  selectError,
+  selectIsLoading,
+} from 'redux/contacts/selectors';
 import { useEffect } from 'react';
 import { fetchContacts } from 'redux/contacts/operations';
 import { ContactsForm } from 'components/ContactsForm/ContactsForm';
@@ -8,8 +12,7 @@ import Loader from 'components/Loader/Loader';
 import { ContactList } from 'components/ContactsList/ContactsList';
 import { MainContainer } from 'components/MainContainer';
 import { Box, Heading, Text } from '@chakra-ui/react';
-
-
+import { Filter } from 'components/Filter/Filter';
 
 const Contacts = () => {
   const contacts = useSelector(selectContacts);
@@ -19,17 +22,35 @@ const Contacts = () => {
   useEffect(() => {
     dispatch(fetchContacts());
   }, [dispatch]);
+
   return (
     <MainContainer>
-      <Heading as='h1' size='3xl' textTransform='uppercase' textAlign='center' mb={4}> Phonebook</Heading>
+      <Heading
+        as="h1"
+        size="3xl"
+        textTransform="uppercase"
+        textAlign="center"
+        mb={4}
+      >
+        {' '}
+        Phonebook
+      </Heading>
       <ContactsForm />
       {error !== null && <p>error</p>}
       {isLoading && <Loader />}
       {contacts.length > 0 ? (
         <Box>
-          <Heading as ='h2' size ='2xl' textTransform='uppercase' textAlign='center' mb={4}>Contacts</Heading>
+          <Heading
+            as="h2"
+            size="2xl"
+            textTransform="uppercase"
+            textAlign="center"
+            mb={4}
+          >
+            Contacts
+          </Heading>
 
-        
+          <Filter />
           <ContactList />
         </Box>
       ) : (
