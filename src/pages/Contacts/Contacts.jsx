@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import { fetchContacts } from 'redux/contacts/operations';
 import { ContactsForm } from 'components/ContactsForm/ContactsForm';
 import Loader from 'components/Loader/Loader';
-import { Filter } from 'components/Filter/Filter';
+
 import { ContactList } from 'components/ContactsList/ContactsList';
 import { MainContainer } from 'components/MainContainer';
 import { Box, Heading, Text } from '@chakra-ui/react';
