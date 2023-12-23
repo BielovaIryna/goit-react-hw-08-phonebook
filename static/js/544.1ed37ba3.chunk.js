@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[544],{1673:function(e,n,o){o.r(n);var t=o(502),r=o(184),i=o(2144).Heading;n.default=function(){return(0,r.jsx)(t.t,{children:(0,r.jsx)(i,{as:"h1",size:"3xl",textTransform:"uppercase",textAlign:"center",children:"Your phonebook is waiting for you"})})}}}]);
+//# sourceMappingURL=544.1ed37ba3.chunk.js.map
