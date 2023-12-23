@@ -29,7 +29,7 @@ const Contacts = () => {
         <Box>
           <Heading as ='h2' size ='2xl' textTransform='uppercase' textAlign='center' mb={4}>Contacts</Heading>
 
-          <Filter />
+        
           <ContactList />
         </Box>
       ) : (
