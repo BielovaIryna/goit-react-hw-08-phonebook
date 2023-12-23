@@ -7,7 +7,7 @@ import Loader from 'components/Loader/Loader';
 import { Filter } from 'components/Filter/Filter';
 import { ContactList } from 'components/ContactsList/ContactsList';
 import { MainContainer } from 'components/MainContainer';
-import { Heading } from '@chakra-ui/react';
+import { Box, Heading, Text } from '@chakra-ui/react';
 
 
 
@@ -26,14 +26,14 @@ const Contacts = () => {
       {error !== null && <p>error</p>}
       {isLoading && <Loader />}
       {contacts.length > 0 ? (
-        <div>
+        <Box>
           <Heading as ='h2' size ='2xl' textTransform='uppercase' textAlign='center' mb={4}>Contacts</Heading>
 
           <Filter />
           <ContactList />
-        </div>
+        </Box>
       ) : (
-        <p>Unfortunately you don't have any contacts in your Phonebook</p>
+        <Text>Unfortunately you don't have any contacts in your Phonebook</Text>
       )}
     </MainContainer>
   );
