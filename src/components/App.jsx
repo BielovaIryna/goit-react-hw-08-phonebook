@@ -1,13 +1,13 @@
-import css from './App.module.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchContacts } from "redux/contacts/operations";
+import { selectContacts, selectError, selectIsLoading } from "redux/contacts/selectors";
+import { ContactsForm } from "./ContactsForm/ContactsForm";
+import Loader from "./Loader/Loader";
+import { Filter } from "./filter/Filter";
+import { ContactList } from "./ContactsList/ContactsList";
 
-import { selectContacts, selectError, selectIsLoading } from 'redux/selectors';
-import { ContactList } from './ContactsList/ContactsList';
-import { Filter } from './filter/Filter';
-import { ContactsForm } from'./ContactsForm/ContactsForm';
-import { useEffect } from 'react';
-import { fetchContacts } from 'redux/operations';
-import Loader from './Loader/Loader';
+
 
 
 export const App = () => {
@@ -20,13 +20,13 @@ useEffect (()=>{
   
 },[dispatch])
   return (
-    <div className={css.section}>
-      <h1 className={css.mainTitle}> Phonebook</h1>
+    <div >
+      <h1 > Phonebook</h1>
       <ContactsForm />
       {error!==null&& <p>error</p>}
 			{isLoading&&<Loader/>}
      {contacts.length >0 ? (<div>
-      <h2 className={css.secondaryTitle}>Contacts</h2>
+      <h2 >Contacts</h2>
      
           <Filter /> 
     <ContactList/>
