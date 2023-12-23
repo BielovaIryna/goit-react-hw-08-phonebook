@@ -1,15 +1,9 @@
-import { Vortex } from 'react-loader-spinner';
+import { CircularProgress } from '@chakra-ui/react';
 const Loader =()=>{
 	return(
-<Vortex
-  visible={true}
-  height="80"
-  width="80"
-  ariaLabel="vortex-loading"
-  wrapperStyle={{}}
-  wrapperClass="vortex-wrapper"
-  colors={['red', 'green', 'blue', 'yellow', 'orange', 'purple']}
-/>
+    <CircularProgress isIndeterminate color='pink.700' size='60px' ml='50%'/>
+
 	)
 }
 export default Loader;
+

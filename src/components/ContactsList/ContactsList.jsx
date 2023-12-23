@@ -1,3 +1,4 @@
+import { UnorderedList } from "@chakra-ui/react";
 import { ContactsItem } from "components/ContactsItem/ContactsItem";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteContact } from "redux/contacts/operations";
@@ -13,7 +14,7 @@ export const ContactList = () => {
     
   };
   return (
-    <ul>
+    <UnorderedList listStyleType='none'>
       {contacts.map(contact => {
         return (
           <ContactsItem
@@ -23,6 +24,6 @@ export const ContactList = () => {
           />
         );
       })}
-    </ul>
+    </UnorderedList>
   );
 };
