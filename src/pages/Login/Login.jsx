@@ -26,7 +26,7 @@ export default function Login() {
         Mail:</FormLabel>
         <Input
           type="email"
-          name="userEmail"
+          name="userLoginEmail"
           placeholder="user@gmail.com"
           required
           size={['sm', null, 'sm','md','lg']}
@@ -38,8 +38,8 @@ export default function Login() {
       <FormLabel mb={2}>
         Pasword:</FormLabel>
         <Input
-          type="text"
-          name="userPassword"
+          type="password"
+          name="userLoginPassword"
           placeholder="*******"
           minLength={6}
           required

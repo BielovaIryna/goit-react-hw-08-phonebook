@@ -23,10 +23,11 @@ export default function Register() {
   };
   return (
     <MainContainer>
-      <FormControl onSubmit={onSubmit} maxW='xs'>
+      <FormControl isRequired as ='form' onSubmit={onSubmit} maxW='xs'>
         <FormLabel mb={2}>
-          Name:
+          Name: </FormLabel>
           <Input
+          as="input"
             type="text"
             name="userName"
             placeholder="Andre Onana"
@@ -35,10 +36,11 @@ export default function Register() {
           focusBorderColor={bc}
           mb={2}
           />
-        </FormLabel>
-        <FormLabel>
-          Mail:
+       
+        <FormLabel mb={2}>
+          Mail: </FormLabel>
           <Input
+          as="input"
             type="email"
             name="userEmail"
             placeholder="user@gmail.com"
@@ -47,19 +49,20 @@ export default function Register() {
           focusBorderColor={bc}
           mb={2}
           />
-        </FormLabel>
+       
         <FormLabel mb={2}>
-          Password:
+          Password: </FormLabel>
           <Input
-            type="text"
+          as="input"
+            type="password"
             name="userPassword"
             placeholder="*******"
             required
             size={['sm', null, 'sm','md','lg']}
           focusBorderColor={bc}
           mb={2}
-          ></Input>
-        </FormLabel>
+          />
+        
         <Button variant='baseStyle' type="submit">Sign Up</Button>
       </FormControl>
     </MainContainer>
